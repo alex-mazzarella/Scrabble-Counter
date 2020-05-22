@@ -34,7 +34,12 @@ public class Main extends ConsoleProgram {
      */
 
     private String insertWord() {
-        return readLine("Enter your word here: ");
+        String enteredWord;
+        do {            //do while prevents the algorithm to move forward if
+            // the user hits ENTER before adding any character
+            enteredWord = readLine("Enter your word here: ");
+        } while (enteredWord.equals(""));
+        return enteredWord;
     }
 
     /**
